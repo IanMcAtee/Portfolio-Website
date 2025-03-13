@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian McAtee</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        section {
+            margin: 0px 40px
+        }
+        
+        /* Header Properties */
+        header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: rgba(128, 128, 128, 0.281);
+            height: auto;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header-logo {
+            height: 80px;
+        }
+
+        .header-nav-links > a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+        .header-nav-links > a:hover {
+            text-decoration: underline;
+            font-weight: bold;  
+        }
+
+        /* Title Properties */
+        h1 {
+            font-size: 100pt;
+            font-weight: 900;
+            
+        }
+
+        /* Section Properties */
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        /* Feature Properties */
+        .card-grid {
+            margin-top: 20px;
+            display: grid;
+            width: 100%;
+            grid-template-rows: 400px;
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 15px
+        }
+
+        .card {
+            display: flex;
+            height: 100%;
+            width: auto;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 60px;
+            padding-left: 20px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%,  rgba(0, 0, 0, .0) 33%, rgba(0, 0, 0, 0.9) 100%);
+            border-radius: 20px; 
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0px;
+            z-index: -1;
+        }
+
+        
+
+        .card:hover{
+            height: 105%;
+        }
+
+        
+
+
+     
+    </style>
+</head>
+<body>
+    <header>
+        <img class="header-logo" src="./Images/logo.png">
+        <nav class="header-nav-links">
+            <a href="#">PROJECTS</a>
+            <a href="#">BLOG</a>
+            <a href="#">RESUME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </nav>          
+    </header>
+
+    <section id="title">
+        <h1>IAN MCATEE</h1>
+    </section>
+
+    <section id="projects">
+        <div class="section-heading">
+            <h2>Projects</h2>
+            <h5>View More &#8594;</h3>
+        </div>
+        <hr />
+        <div class="card-grid">
+            <div class="card">
+                <img src="./Images/Stock/ai-generated-8548258_1280.jpg"/>
+                <h2>Interpolation Tutorial</h2>
+                <p>This is a synopis of the card</p>
+            </div>
+            <div class="card">
+                <img src="./Images/Stock/wires.jpg"/>
+                <h2>Interpolation Tutorial</h2>
+                <p>This is a synopis of the card</p>
+            </div>
+            <div class="card">
+                <img src="./Images/Stock/computer-chip.jpg"/>
+                <h2>Interpolation Tutorial</h2>
+                <p>This is a synopis of the card</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
