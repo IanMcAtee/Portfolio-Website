@@ -7,27 +7,82 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        
+        :root
+        {
+            --desktopWidth: 1200px;
+            --accentColor: rgb(127, 255, 212);
+            --primaryButtonColor: rgb(127, 255, 212);
+            --primaryButtonHoverColor: rgb(21, 207, 145);
+        }
+
         * {
             padding: 0px;
             margin: 0px;
             font-family: "Montserrat", sans-serif;
+            
+        }
+
+        a {
+            text-decoration: none;
         }
 
         body {
             background-color: white;
         }
 
-        section {
-            margin: 0px 40px
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
+        section {
+            width: var(--desktopWidth);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 100pt;
+            font-weight: 900;
+        }
+
+        h3 {
+            font-size: 20pt;
+        }
+
+        h4 {
+            font-size: 14pt;
+        }
+
+        .anchor-button-primary
+        {
+            background-color: var(--primaryButtonColor);
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 14pt;
+            max-width: fit-content;
+        }
+
+        .anchor-button-primary:hover {
+            background-color: var(--primaryButtonHoverColor);
+            cursor: pointer;
+        }
+
+        .accent-divider {
+            height: 1px;
+            border-style: solid;
+            border-color: aquamarine;
+            border-width: 8px 0px 0px 0px;
+            width: 23%;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
         /* Header Properties */
         header {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
-            background-color: rgba(128, 128, 128, 0.281);
+            background-color: rgba(128, 128, 128, 0.2);
             height: auto;
             align-items: center;
             padding: 10px 20px;
@@ -38,22 +93,24 @@
         }
 
         .header-nav-links > a {
-            text-decoration: none;
             color: black;
             font-weight: 500;
             margin-left: 20px;
         }
 
         .header-nav-links > a:hover {
-            text-decoration: underline;
-            font-weight: bold;  
+            background-color: var(--accentColor); 
         }
 
-        /* Title Properties */
-        h1 {
-            font-size: 100pt;
-            font-weight: 900;
-            
+        
+
+        /* TITLE PROPERTIES */
+       
+
+        .subtitle {
+            font-size: 18pt;
+            margin:0;
+            padding: 0;
         }
 
         /* Section Properties */
@@ -63,31 +120,42 @@
             align-items: center;
             font-size: x-large;
             font-weight: bold;
+            border-style: solid;
+            border-width: 0px 0px 3px 0px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         /* Feature Properties */
-        .card-grid {
-            margin-top: 20px;
+        .card-grid-3 {
             display: grid;
-            width: 100%;
-            grid-template-rows: 400px;
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 15px
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 600px;
+            gap: 20px;
+        }
+        
+        .card-container { 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            gap: 20px;
         }
 
         .card {
+            height: 600px;
             display: flex;
-            height: 100%;
-            width: auto;
             flex-direction: column;
             justify-content: flex-end;
-            padding-bottom: 60px;
-            padding-left: 20px;
             background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%,  rgba(0, 0, 0, .0) 33%, rgba(0, 0, 0, 0.9) 100%);
             border-radius: 20px; 
             color: white;
+            text-decoration: none;
             overflow: hidden;
             position: relative;
+            /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); */
+            
+           
+            
         }
 
         .card > img {
@@ -98,11 +166,107 @@
             inset: 0px;
             z-index: -1;
         }
+        
+        .card-content {
+            margin: 0px 20px 60px 20px;
+        }
+
+        .card-title {
+            margin-bottom: 20px;
+        }
+
+        .card-summary {
+            margin-bottom: 10px;
+            color: rgb(230, 230, 230);
+            display: none;
+        }
+
+        .icon-text-pair {
+            display: flex;
+            height: auto;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card:hover .card-summary
+        {
+            display: block;
+        }
+
+        .card:hover {
+            height: 105%;
+        }
 
         
+        /* INTERESTS PROPERTIES */
 
-        .card:hover{
-            height: 105%;
+        .interest-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+            gap: 20px;
+        }
+
+        .interest-content {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 40px;
+            gap:20px;
+            
+
+        }
+
+        .interest-item {
+            
+        }
+
+        .icon-bordered {
+            border-radius: 50%;
+            border-style: solid;
+            border-color: aquamarine;
+            border-width: 4px;
+            padding: 5px;
+        }
+       
+        
+        
+
+        /* Footer Properties */
+        footer {
+            display: flex;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aquamarine;
+            padding: 0px 20px;
+            font-weight: bold;
+        }
+
+        .social-icons > a{
+            margin-left: 20px;
+        }
+
+        @media (width <= 1200px)
+        {
+            .card-grid-3 {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 1fr 1fr;
+                
+            }
+
+            .card {
+                height: 200px;
+            }
+
+            footer {
+                background-color: brown;
+            }
         }
 
         
@@ -113,7 +277,7 @@
 </head>
 <body>
     <header>
-        <img class="header-logo" src="./Images/logo.png">
+        <img class="header-logo" src="./images/logo.png">
         <nav class="header-nav-links">
             <a href="#">PROJECTS</a>
             <a href="#">BLOG</a>
@@ -123,34 +287,125 @@
         </nav>          
     </header>
 
-    <section id="title">
-        <h1>IAN MCATEE</h1>
-    </section>
+    <main>
+        <section id="title">
+            <h1>IAN MCATEE</h1>
+            <div class="accent-divider"></div>
+            <p class="subtitle">Engineer | Developer | Student</p>
+        </section>
+    
+        <section id="projects">
+            <div class="section-heading">
+                <h2>Projects</h2>
+                <a class="anchor-button-primary">View All &#8594;</a>
+            </div>
+            <div class="card-grid-3">
+                <a href="#">
+                    <div class="card">
+                        <img src="./images/stock/ai-generated-8548258_1280.jpg"/>
+                        <div class="card-content">
+                            <h2 class="card-title">Interpolation Tutorial</h2>
+                            <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
+                            <div class="icon-text-pair">
+                                <img src="./images/icons/Calender24dpWhite.svg">
+                                <p>February 3, 2025</p>
+                            </div>
+                            
+                        </div> 
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card">
+                        <img src="./images/stock/wires.jpg">
+                        <div class="card-content">
+                            <h2 class="card-title">Bayesian Classification</h2>
+                            <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
+                            <div class="icon-text-pair">
+                                <img src="./images/icons/Calender24dpWhite.svg">
+                                <p>February 3, 2025</p>
+                            </div>
+                            
+                        </div> 
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card">
+                        <img src="./images/stock/computer-chip.jpg"/>
+                        <div class="card-content">
+                            <h2 class="card-title">HoloLens Hello World</h2>
+                            <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
+                            <div class="icon-text-pair">
+                                <img src="./images/icons/Calender24dpWhite.svg">
+                                <p>February 3, 2025</p>
+                            </div>
+                            
+                        </div> 
+                    </div>
+                </a>
+            </div>
+        </section>
 
-    <section id="projects">
-        <div class="section-heading">
-            <h2>Projects</h2>
-            <h5>View More &#8594;</h3>
+        <section id="about">
+            <div class="section-heading">
+                <h2>About</h2>
+            </div>
+            <div class="interest-grid">
+                <div class="interest-content">
+                    <h3>Healthcare worker turned engineer </h3>
+                    <p>
+                        Paragraph of text beneath the heading to explain the heading. 
+                        We'll add onto it with another sentence and probably just keep going until we run out of words.
+                    </p>
+                    <a class="anchor-button-primary">Submit</a>
+                    
+                </div>
+                <div class="interest-item">
+                    <div class="icon-text-pair">
+                        <img class="icon-bordered" src="./images/icons/icons8-hospital-48.png">
+                        <h4>Biomedical Engineering</h4>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <div class="icon-text-pair">
+                        <img class="icon-bordered" src="./images/icons/icons8-machine-learning-48.png">
+                        <h4>Machine Learning</h4>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <div class="icon-text-pair">
+                        <img class="icon-bordered" src="./images/icons/icons8-oculus-rift-48.png">
+                        <h4>Mixed Reality</h4>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <div class="icon-text-pair">
+                        <img class="icon-bordered" src="./images/icons/icons8-web-48.png">
+                        <h4>Web Development</h4>
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+            
+        <section>
+            <div class="section-heading">
+                <h2>Contact</h2>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>© 2025 Ian McAtee</p>
+        <div class="social-icons">
+            <a href="#"><img src="./images/icons/icons8-linkedin-24.svg"/></a>
+            <a href="#"><img src="./images/icons/icons8-github-24.svg"/></a>
+            <a href="#"><img src="./images/icons/icons8-medium-old-24.svg"/></a>
+            <a href="#"><img src="./images/icons/icons8-bluesky-24.svg"/></a>
+            <a href="#"><img src="./images/icons/icons8-x-24.svg"/></a>
         </div>
-        <hr />
-        <div class="card-grid">
-            <div class="card">
-                <img src="./Images/Stock/ai-generated-8548258_1280.jpg"/>
-                <h2>Interpolation Tutorial</h2>
-                <p>This is a synopis of the card</p>
-            </div>
-            <div class="card">
-                <img src="./Images/Stock/wires.jpg"/>
-                <h2>Interpolation Tutorial</h2>
-                <p>This is a synopis of the card</p>
-            </div>
-            <div class="card">
-                <img src="./Images/Stock/computer-chip.jpg"/>
-                <h2>Interpolation Tutorial</h2>
-                <p>This is a synopis of the card</p>
-            </div>
-        </div>
-    </section>
+    </footer>
     
 </body>
 </html>
