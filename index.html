@@ -278,6 +278,20 @@
             padding: 5px 10px;
         }
 
+        /* Contact Properties */
+        .contact-section-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+        }
+
+        .contact-form-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+
 
 
         /* Footer Properties */
@@ -300,7 +314,7 @@
 </head>
 <body>
     <header>
-        <img class="header-logo" src="./images/logo.png">
+        <img class="header-logo" src="./Images/logo.png">
         <nav class="header-nav-links">
             <a href="#">PROJECTS</a>
             <a href="#">BLOG</a>
@@ -325,12 +339,12 @@
             <div class="card-grid-3">
                 <a href="#">
                     <div class="card">
-                        <img src="./images/stock/ai-generated-8548258_1280.jpg"/>
+                        <img src="./Images/Stock/ai-generated-8548258_1280.jpg"/>
                         <div class="card-content">
                             <h2 class="card-title">Interpolation Tutorial</h2>
                             <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
                             <div class="icon-text-pair">
-                                <img src="./images/icons/Calender24dpWhite.svg">
+                                <img src="./Images/icons/Calender24dpWhite.svg">
                                 <p>February 3, 2025</p>
                             </div>
                             
@@ -339,12 +353,12 @@
                 </a>
                 <a href="#">
                     <div class="card">
-                        <img src="./images/stock/wires.jpg">
+                        <img src="./Images/Stock/wires.jpg">
                         <div class="card-content">
                             <h2 class="card-title">Bayesian Classification</h2>
                             <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
                             <div class="icon-text-pair">
-                                <img src="./images/icons/Calender24dpWhite.svg">
+                                <img src="./Images/icons/Calender24dpWhite.svg">
                                 <p>February 3, 2025</p>
                             </div>
                             
@@ -353,12 +367,12 @@
                 </a>
                 <a href="#">
                     <div class="card">
-                        <img src="./images/stock/pexels-junior-teixeira-1064069-2047905.jpg"/>
+                        <img src="./Images/Stock/wires.jpg"/>
                         <div class="card-content">
                             <h2 class="card-title">This Portfolio Website</h2>
                             <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
                             <div class="icon-text-pair">
-                                <img src="./images/icons/Calender24dpWhite.svg">
+                                <img src="./Images/icons/Calender24dpWhite.svg">
                                 <p>February 3, 2025</p>
                             </div>
                             
@@ -387,25 +401,25 @@
                 </div>
                 <div class="interest-item">
                     <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-hospital-48.png">
+                        <img class="icon-bordered" src="./Images/icons/icons8-hospital-48.png">
                         <h4>Biomedical<br/>Engineering</h4>
                     </div>
                 </div>
                 <div class="interest-item">
                     <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-machine-learning-48.png">
+                        <img class="icon-bordered" src="./Images/icons/icons8-machine-learning-48.png">
                         <h4>Machine<br/>Learning</h4>
                     </div>
                 </div>
                 <div class="interest-item">
                     <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-oculus-rift-48.png">
+                        <img class="icon-bordered" src="./Images/icons/icons8-oculus-rift-48.png">
                         <h4>Mixed<br/>Reality</h4>
                     </div>
                 </div>
                 <div class="interest-item">
                     <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-web-48.png">
+                        <img class="icon-bordered" src="./Images/icons/icons8-web-48.png">
                         <h4>Web<br/>Development</h4>
                     </div>
                 </div>
@@ -457,10 +471,30 @@
             </div>
         </section>
         
-        <section>
+        <section id="Contact">
             <div class="section-heading">
                 <h2>CONTACT</h2>
             </div>
+            <div class="contact-section-grid">
+                <div>
+                    <form>
+                        <div class="contact-form-container">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name" required />
+                            <label for="email">Email: </label>
+                            <input type="email" name="email" id="email" required />
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+                            <input type="submit" value="SEND" />
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <h3>Open to New Opportunities</h3>
+                    <p>If you have an open role that you believe matches my skillset, reach out, I'd love to discuss it with you.</p>
+                </div>
+            </div>
+
         </section>
     </main>
     
@@ -468,11 +502,11 @@
     <footer>
         <p>© 2025 Ian McAtee</p>
         <div class="social-icons">
-            <a href="#"><img src="./images/icons/icons8-linkedin-24.svg"/></a>
-            <a href="#"><img src="./images/icons/icons8-github-24.svg"/></a>
-            <a href="#"><img src="./images/icons/icons8-medium-old-24.svg"/></a>
-            <a href="#"><img src="./images/icons/icons8-bluesky-24.svg"/></a>
-            <a href="#"><img src="./images/icons/icons8-x-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-linkedin-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-github-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-medium-old-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-bluesky-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-x-24.svg"/></a>
         </div>
     </footer>
     

@@ -1,0 +1,13 @@
+/* MAIN WEBSITE STYLE */
+
+/* Import googles fonts. Main Font: Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global style variables */
+:root
+{
+    --desktopWidth: 1200px;
+    --accentColor: rgb(127, 255, 212);
+    /* --primaryButtonColor: rgb(127, 255, 212); */
+    --primaryButtonHoverColor: rgb(21, 207, 145);
+}
