@@ -1,13 +1,81 @@
-/* MAIN WEBSITE STYLE */
+/* 
+GLOBAL STYLES
+Last updated: 3/17/25
+*/
 
-/* Import googles fonts. Main Font: Montserrat */
+/* IMPORT FONTS: Main font -> Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Global style variables */
+/* GLOBAL STYLE VARIABLES*/
 :root
 {
     --desktopWidth: 1200px;
+    --primaryBackgroundColor: rgb(255, 255, 255);
+    --primaryTextColor: rgb(0, 0, 0);
     --accentColor: rgb(127, 255, 212);
-    /* --primaryButtonColor: rgb(127, 255, 212); */
     --primaryButtonHoverColor: rgb(21, 207, 145);
+    --headerColor: rgba(128, 128, 128, 0.2); 
+}
+
+/* GLOBAL ELEMENT PROPERTIES */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;   
+}
+
+/* PAGE SETUP PROPERTIES */
+body {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: var(--desktopWidth);
+    margin-bottom: 40px;
+}
+
+/* GLOBAL HEADER PROPERTIES*/
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, 0.2);
+    height: auto;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-logo {
+    height: 80px;
+}
+
+.header-nav-links > a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.header-nav-links > a:hover {
+    background-color: var(--accentColor); 
+}
+
+/* CUSTOM CLASSES */
+.anchor-btn-primary {
+    background-color: var(--accentColor);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14pt;
+    max-width: fit-content;
+}
+
+.anchor-btn-primary:hover {
+    background-color: var(--primaryButtonHoverColor);
+    cursor: pointer;
 }

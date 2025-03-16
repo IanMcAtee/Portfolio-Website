@@ -1,0 +1,204 @@
+/* 
+MAIN PAGE STYLES
+Last updated: 3/17/25
+*/
+
+
+/* GLOBAL PAGE PROPERTIES */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* MAIN TITLE PROPERTIES */
+.title-header {
+    font-size: 100pt;
+    font-weight: 900;
+}
+
+.main-subtitle {
+    font-size: 18pt;
+}
+
+.accent-divider {
+    height: 1px;
+    border-style: solid;
+    border-color: aquamarine;
+    border-width: 8px 0px 0px 0px;
+    width: 23%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+/* PROJECTS SECTION PROPERTIES */
+.card-grid-1x3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 500px;
+    gap: 20px;
+}
+
+.card-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%,  rgba(0, 0, 0, .0) 33%, rgba(0, 0, 0, 0.9) 100%);
+    border-radius: 20px; 
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); */ 
+}
+
+.card-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0px;
+    z-index: -1;
+}
+
+.card-content {
+    margin: 0px 20px 60px 20px;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.card-summary {
+    margin-bottom: 10px;
+    color: rgb(230, 230, 230);
+    display: none;
+}
+
+.icon-text-pair {
+    display: flex;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-container:hover {
+    height: 103%;
+}
+
+.card-container:hover .card-summary
+{
+    display: block;
+}
+
+/* ABOUT SECTION PROPERTIES */
+.about-grid-2x3 {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+}
+
+.about-container {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 3px;
+    padding: 15px
+}
+
+.interest-item-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text-pair { /*Duplicate from above */
+    display: flex;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-bordered {
+    border-radius: 20px;
+    border-style: solid;
+    border-color: aquamarine;
+    border-width: 4px;
+    padding: 5px;
+}
+
+/* SKILLS SECTION PROPERTIES */
+.skills-grid-1x3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    gap: 15px;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding: 15px;
+}
+
+.skill-title {
+    margin-bottom: 10px;
+}
+
+.skill-masonry {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    gap: 4px;
+    justify-content: flex-start;
+
+}
+
+.skill-item {
+    display: inline;
+    border-style: solid;
+    border-color: var(--accentColor);
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* CONTACT SECTION PROPERTIES */
+.contact-grid-1x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name-text-area {
+    border-radius: 10px;
+}
+
+.contact-form-submit-btn
+{
+    background-color: var(--accentColor);
+}
