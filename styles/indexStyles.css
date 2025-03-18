@@ -31,7 +31,7 @@ Last updated: 3/17/25
 .accent-divider {
     height: 1px;
     border-style: solid;
-    border-color: aquamarine;
+    border-color: var(--accentColor);
     border-width: 8px 0px 0px 0px;
     width: 23%;
     margin-top: 0px;
@@ -75,6 +75,7 @@ Last updated: 3/17/25
 
 .card-title {
     margin-bottom: 20px;
+    color: white;
 }
 
 .card-summary {
@@ -88,6 +89,7 @@ Last updated: 3/17/25
     height: auto;
     align-items: center;
     gap: 10px;
+    color: white;
 }
 
 .card-container:hover {
@@ -104,7 +106,7 @@ Last updated: 3/17/25
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 15px;
+    column-gap: 30px;
 }
 
 .about-container {
@@ -186,19 +188,41 @@ Last updated: 3/17/25
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 10px;
+    gap: 60px;
 }
 
 .contact-form-container {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.contact-name-text-area {
+.contact-form-input {
     border-radius: 10px;
+    padding: 5px 10px;
+    height: 20px;
+    border-width: 3px;
+    border-color: black;
+    font-size: 12pt;
 }
 
-.contact-form-submit-btn
-{
+.contact-form-message-area{
+    height: 120px;
+}
+
+.contact-form-submit-btn { /* consider just using the accent button class */
     background-color: var(--accentColor);
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14pt;
+    max-width: fit-content;
+}
+
+.contact-explainer-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
 }

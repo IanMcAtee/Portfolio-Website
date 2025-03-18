@@ -19,6 +19,9 @@
             <a href="#">RESUME</a>
             <a href="#">ABOUT</a>
             <a href="#">CONTACT</a>
+            <button id="light-dark-mode-btn">
+                <img src="./Images/icons/dark_mode_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"/>
+            </button>
         </nav>          
     </header>
 
@@ -180,29 +183,39 @@
                     <form>
                         <div class="contact-form-container">
                             <label for="name">Name:</label>
-                            <input class="contact-name-text-area" type="text" name="name" id="name" required />
+                            <input class="contact-form-input" type="text" name="name" id="name" required />
                             <label for="email">Email: </label>
-                            <input type="email" name="email" id="email" required />
+                            <input class="contact-form-input" type="email" name="email" id="email" required />
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
-                            <input class="contact-form-submit-btn" type="submit" value="SEND" />
+                            <textarea class="contact-form-input contact-form-message-area" id="message" name="message" placeholder="Your message"></textarea>
+                            <input class="contact-form-submit-btn" type="submit" value="Send" />
                         </div>
                     </form>
                 </div>
-                <div>
+                <div class="contact-explainer-container">
                     <h3>Open to New Opportunities</h3>
-                    <p>If you have an open role that you believe matches my skillset, reach out, I'd love to discuss it with you.</p>
+                    <p>If you have an open role that you believe matches my skillset, leave a message or reachout on any of my socials.
+                        I'd love to talk to you. 
+                    </p>
                 </div>
             </div>
-
         </section>
-
-
     </main>
 
+    <footer>
+        <p>© 2025 Ian McAtee</p>
+        <div class="social-icons">
+            <a href="#"><img src="./Images/icons/icons8-linkedin-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-github-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-medium-old-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-bluesky-24.svg"/></a>
+            <a href="#"><img src="./Images/icons/icons8-x-24.svg"/></a>
+        </div>
+    </footer>
 
 
 
-
+    <!-- IMPORT MAIN JAVASCRIPT -->
+    <script src="./main.js" charset="UTF-8"></script>
 </body>
 </html>
