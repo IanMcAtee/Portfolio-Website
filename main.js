@@ -5,8 +5,11 @@ Purpose: Controls the functionality for elements present on all pages:
 */
 
 
+
+// LIGHT/DARK MODE FUNCTIONALITY 
 const root = document.documentElement;
 const lightDarkModeBtn = document.getElementById("light-dark-mode-btn");
+const lightDarkModeBtnImg = lightDarkModeBtn.lastElementChild;
 
 var isLightMode = true;
 
@@ -27,15 +30,38 @@ function toggleLightDarkMode()
 
     if (isLightMode)
     {
+        lightDarkModeBtnImg.setAttribute("src", "./images/global/icons/dark_mode_24dp.svg");
         root.style.setProperty("--backgroundColor", lightModeBackgroundColor);
         root.style.setProperty("--primaryTextColor", lightModePrimaryTextColor);
     }
     else
     {
+        lightDarkModeBtnImg.setAttribute("src", "./images/global/icons/light_mode_24dp.svg");
         root.style.setProperty("--backgroundColor", darkModeBackgroundColor);
         root.style.setProperty("--primaryTextColor", darkModePrimaryTextColor);
     }
 }
 
-
 lightDarkModeBtn.addEventListener("click", toggleLightDarkMode);
+
+// SIDEBAR FUNCTIONALITY
+const sideBar = document.getElementById("side-bar-container");
+console.log(sideBar);
+const openSideBarBtn = document.getElementById("open-sidebar-btn");
+const closeSideBarBtn = document.getElementById("close-sidebar-btn");
+
+function openSideBar()
+{
+    console.log("open button pressed");
+    sideBar.style.display ="flex";
+}
+
+function closeSideBar()
+{
+    console.log("close button pressed");
+    sideBar.style.display = "none";
+}
+
+openSideBarBtn.addEventListener("click", openSideBar);
+closeSideBarBtn.addEventListener("click", closeSideBar);
+

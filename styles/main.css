@@ -86,11 +86,22 @@ header {
     border-radius: 10px; 
 }
 
-#light-dark-mode-btn
-{
-    height: 40px;
-
+/* SIDEBAR PROPERTIES */
+#side-bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    width: 25%
 }
+
 
 /* GLOBAL FOOTER PROPERTIES */
 footer {
@@ -135,8 +146,8 @@ footer {
     background-color: var(--accentColor);
     border-radius: 10px;
     border-style: none;
-    height: fit-content;
-    padding: 0px 10px;
+    height: 40px;
+    width: 40px;
 }
 
 
