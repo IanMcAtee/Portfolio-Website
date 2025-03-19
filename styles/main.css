@@ -24,8 +24,8 @@ Last updated: 3/17/25
     
     
     --accentColor: rgb(127, 255, 212);
-    --primaryButtonHoverColor: rgb(21, 207, 145);
-    --headerColor: rgba(128, 128, 128, 0.2); 
+    --primaryButtonHoverColor: rgb(25, 230, 161);
+    --headerFooterColor: rgba(128, 128, 128, 0.2); 
 }
 
 /* GLOBAL ELEMENT PROPERTIES */
@@ -56,8 +56,8 @@ section {
 header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(128, 128, 128, 0.2);
-    height: auto;
+    background-color: var(--headerFooterColor);
+    height: fit-content;
     align-items: center;
     padding: 10px 20px;
 }
@@ -66,15 +66,24 @@ header {
     height: 80px;
 }
 
-.header-nav-links > a {
-    color: black;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 20px;
+.header-btns-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-.header-nav-links > a:hover {
-    background-color: var(--accentColor); 
+.header-btns-container > a {
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.header-btns-container > a:hover {
+    background-color: var(--accentColor);
+    border-radius: 10px; 
 }
 
 #light-dark-mode-btn
@@ -89,7 +98,7 @@ footer {
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(223, 223, 223);
+    background-color: var(--headerFooterColor);
     padding: 0px 20px;
     font-weight: bold; 
 }
@@ -100,6 +109,7 @@ footer {
 
 /* CUSTOM CLASSES */
 .anchor-btn-primary {
+    color: black;
     background-color: var(--accentColor);
     border-radius: 10px;
     padding: 10px 20px;
@@ -113,3 +123,28 @@ footer {
     cursor: pointer;
 }
 
+.btn-primary {
+    background-color: var(--accentColor);
+    border-radius: 10px;
+    padding: 0 0 0 0;
+    font-weight: bold;
+    max-width: fit-content;
+}
+
+.btn-icon {
+    background-color: var(--accentColor);
+    border-radius: 10px;
+    border-style: none;
+    height: fit-content;
+    padding: 0px 10px;
+}
+
+
+.btn-icon > img {
+    height: 24px;
+}
+
+.btn-icon:hover {
+    background-color: var(--primaryButtonHoverColor);
+    cursor: pointer;
+}
