@@ -109,7 +109,7 @@ Last updated: 3/17/25
     column-gap: 30px;
 }
 
-.about-container {
+.about-container { 
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: span 2;
