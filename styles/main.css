@@ -9,27 +9,28 @@ Last updated: 3/17/25
 /* GLOBAL STYLE VARIABLES*/
 :root
 {
-    
-
+    /* Style Control Variables */
     --backgroundColor: rgb(255, 255, 255);
-    --lightModeBackgroundColor: rgb(255, 255, 255);
-    --darkModeBackgroundColor: rgb(20, 20, 20);
-
     --primaryTextColor: rgb(0, 0, 0);
     --secondaryTextColor: rgb(20, 20, 20);
+    --iconColor: rgb(0, 0, 0);
+    --accentColor: rgb(127, 255, 212);
+    --accentHoverColor: rgb(25, 230, 161);
+    --headerFooterColor: rgba(128, 128, 128, 0.2); 
+    
+    /* Theme Color Variables */
+    --lightModeBackgroundColor: rgb(255, 255, 255);
+    --darkModeBackgroundColor: rgb(20, 20, 20);
     --lightModePrimaryTextColor: rgb(0, 0, 0);
     --lightModeSecondaryTextColor: rgb(20, 20, 20);
     --darkModePrimaryTextColor: rgb(255, 255, 255);
     --darkModeSecondaryTextColor: rgb(235, 235, 235);
-    
-    
-    --accentColor: rgb(127, 255, 212);
-    --primaryButtonHoverColor: rgb(25, 230, 161);
-    --headerFooterColor: rgba(128, 128, 128, 0.2); 
+    --lightModeIconColor: rgb(0, 0, 0);
+    --darkModeIconColor: rgb(255, 255, 255); 
 
-    --desktopWidth: 1200px;
-    --tabletBreakpoint: 1199px;
-    --phoneBreakpoint: 575px;
+    
+    
+    --primaryButtonHoverColor: rgb(25, 230, 161);
 }
 
 /* GLOBAL ELEMENT PROPERTIES */
@@ -52,7 +53,7 @@ main {
 }
 
 section {
-    width: var(--desktopWidth);
+    width: 1200px;
     margin-bottom: 40px;
 }
 
@@ -95,11 +96,12 @@ header {
 }
 
 /* SIDEBAR PROPERTIES */
-#side-bar-container {
+#sidebar-container {
     display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 30px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -108,20 +110,29 @@ header {
     backdrop-filter: blur(10px);
     z-index: 999;
     width: 33%;
-    padding: 10px;
+    padding: 30px 20px;
 }
 
-#side-bar-container > a {
+#sidebar-container > a {
     font-weight: 500; 
     text-decoration: none;
-    font-size: 28px;
-    margin-bottom: 10px;
+    color: black;
+    font-size: 28px; 
+    padding: 5px 10px;
 }
 
-#side-bar-container > button {
-    margin-left: auto;
-    margin-bottom: 10px;
+#sidebar-container > a:hover {
+    background-color: var(--accentColor);
+    border-radius: 10px;
 }
+
+#close-sidebar-btn {
+    margin-left: auto;
+}
+                    
+#light-dark-mode-sidebar-btn {                    
+    width: 140px;                    
+}                    
 
 
 /* GLOBAL FOOTER PROPERTIES */
@@ -135,9 +146,11 @@ footer {
     font-weight: bold; 
 }
 
-.social-icons > a{
-    margin-left: 20px;
+.social-icons-container {
+    display: flex;
+    gap: 10px;
 }
+
 
 /* CUSTOM CLASSES */
 .anchor-btn-primary {
@@ -163,37 +176,80 @@ footer {
     max-width: fit-content;
 }
 
-.btn-icon {
+.icon-btn {
     background-color: var(--accentColor);
     border-radius: 10px;
     border-style: none;
-    height: 40px;
-    width: 40px;
+    min-height: 40px;
+    min-width: 40px;
 }
 
 
-.btn-icon > img {
+.icon-btn > img {
     height: 24px;
 }
 
-.btn-icon:hover {
+.icon-btn:hover {
     background-color: var(--primaryButtonHoverColor);
     cursor: pointer;
 }
 
+.primary-btn {
+    color: black;
+    background-color: var(--accentColor);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14pt;
+    max-width: fit-content;
+}
 
-@media (max-width: 1199px) {
+.theme-responsive-svg {
+    fill: var(--iconColor);
+}
+
+
+/* SMALL-DESKTOP/TABLET-LANDSCAPE BREAKPOINT */
+@media (max-width: 1200px) {
+
+    /* Set sections to 90% width */
+    section {
+        width: 90%;
+    }
+
+    /* Enable side bar btn */
     #open-sidebar-btn {
         display: block;
     }
 
+    /* Disable header nav btns */
     .header-btns-container > a {
         display: none;
     } 
+
+    /* Disable header light/dark mode btn */
+    #light-dark-mode-header-btn {
+        display: none;
+    }
 }
 
-@media (max-width: 600px) {
-    #side-bar-container {
+/* TABLET-VERTICAL BREAKPOINT */
+@media (max-width: 992px) {
+    /* Nothing currently implemented */
+}
+
+/* PHONE BREAKPOINT */
+@media (max-width: 575px) {
+
+    /* Set side bar to take up entire width */
+    #sidebar-container {
         width: 100%;
+    }
+
+    /* Set footer elements to stack */
+    footer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10px;
     }
 }

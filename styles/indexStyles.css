@@ -57,7 +57,7 @@ Last updated: 3/17/25
     text-decoration: none;
     overflow: hidden;
     position: relative;
-    /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); */ 
+    /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);  */
 }
 
 .card-container > img {
@@ -225,4 +225,32 @@ Last updated: 3/17/25
     flex-direction: column;
     margin-top: 40px;
     gap: 20px;
+}
+
+
+/* SMALL-DESKTOP/TABLET-LANDSCAPE BREAKPOINT */
+@media (max-width: 1200px) {
+
+}
+
+/* TABLET-VERTICAL BREAKPOINT */
+@media (max-width: 992px) {
+
+    .title-header {
+        font-size: 80pt;
+    }
+
+    .card-grid-1x3 {
+        grid-template-rows: 500px 500px 500px;
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 20px;
+    }
+}
+
+/* PHONE BREAKPOINT */
+@media (max-width: 575px) {
+    .title-header {
+        font-size: 70pt;
+    }
 }
