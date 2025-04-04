@@ -14,6 +14,7 @@
     --accentColor: rgb(127, 255, 212);
     --accentHoverColor: rgb(25, 230, 161);
     --headerFooterColor: rgba(128, 128, 128, 0.2); 
+    --sidebarColor: rgba(255, 255, 255, 0.3);
     
     /* Theme Color Variables */
     --lightModeBackgroundColor: rgb(255, 255, 255);
@@ -24,10 +25,6 @@
     --darkModeSecondaryTextColor: rgb(235, 235, 235);
     --lightModeIconColor: rgb(0, 0, 0);
     --darkModeIconColor: rgb(255, 255, 255); 
-
-    
-    
-    --primaryButtonHoverColor: rgb(25, 230, 161);
 }
 
 /* GLOBAL ELEMENT PROPERTIES */
@@ -62,10 +59,6 @@ header {
     height: fit-content;
     align-items: center;
     padding: 10px 20px;
-}
-
-.header-logo {
-    height: 80px;
 }
 
 .header-btns-container
@@ -103,7 +96,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--sidebarColor);
     backdrop-filter: blur(10px);
     z-index: 999;
     width: 33%;
@@ -201,8 +194,12 @@ footer {
     max-width: fit-content;
 }
 
-.theme-responsive-svg {
+.theme-filled-svg {
     fill: var(--iconColor);
+}
+
+.theme-unfilled-svg {
+    stroke: var(--iconColor);
 }
 
 
