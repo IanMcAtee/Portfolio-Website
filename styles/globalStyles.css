@@ -3,7 +3,7 @@
 /* IMPORT FONTS: Main font -> Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* GLOBAL STYLE VARIABLES*/
+/*------ GLOBAL STYLE VARIABLES* ------*/
 :root
 {
     /* Style Control Variables */
@@ -25,9 +25,12 @@
     --darkModeSecondaryTextColor: rgb(235, 235, 235);
     --lightModeIconColor: rgb(0, 0, 0);
     --darkModeIconColor: rgb(255, 255, 255); 
+
+    /* Breakpoint Variables */
+    --tabletLandscapeBreakpoint: 1200px;
 }
 
-/* GLOBAL ELEMENT PROPERTIES */
+/*------ GLOBAL ELEMENT PROPERTIES ------*/
 * {
     padding: 0px;
     margin: 0px;
@@ -35,7 +38,7 @@
     color: var(--primaryTextColor);
 }
 
-/* PAGE SETUP PROPERTIES */
+/*------ PAGE SETUP PROPERTIES ------ */
 body {
     background-color: var(--backgroundColor);
 }
@@ -51,7 +54,7 @@ section {
     margin-bottom: 40px;
 }
 
-/* GLOBAL HEADER PROPERTIES*/
+/*------ HEADER PROPERTIES ------*/
 header {
     display: flex;
     justify-content: space-between;
@@ -85,7 +88,7 @@ header {
     display: none;
 }
 
-/* SIDEBAR PROPERTIES */
+/*------ SIDEBAR PROPERTIES ------*/
 #sidebar-container {
     display: none;
     flex-direction: column;
@@ -125,7 +128,7 @@ header {
 }                    
 
 
-/* GLOBAL FOOTER PROPERTIES */
+/*------ FOOTER PROPERTIES ------*/
 footer {
     display: flex;
     height: 80px;
@@ -138,12 +141,12 @@ footer {
 
 .social-icons-container {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 
-/* CUSTOM CLASSES */
-.anchor-btn-primary {
+/*------ GLOBAL CUSTOM CLASSES ------*/
+.primary-btn {
     color: black;
     background-color: var(--accentColor);
     border-radius: 10px;
@@ -153,17 +156,9 @@ footer {
     max-width: fit-content;
 }
 
-.anchor-btn-primary:hover {
-    background-color: var(--primaryButtonHoverColor);
+.primary-btn:hover {
+    background-color: var(--accentHoverColor);
     cursor: pointer;
-}
-
-.btn-primary {
-    background-color: var(--accentColor);
-    border-radius: 10px;
-    padding: 0 0 0 0;
-    font-weight: bold;
-    max-width: fit-content;
 }
 
 .icon-btn {
@@ -174,24 +169,13 @@ footer {
     min-width: 40px;
 }
 
-
 .icon-btn > img {
     height: 24px;
 }
 
 .icon-btn:hover {
-    background-color: var(--primaryButtonHoverColor);
+    background-color: var(--accentHoverColor);
     cursor: pointer;
-}
-
-.primary-btn {
-    color: black;
-    background-color: var(--accentColor);
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 14pt;
-    max-width: fit-content;
 }
 
 .theme-filled-svg {
@@ -203,8 +187,8 @@ footer {
 }
 
 
-/* SMALL-DESKTOP/TABLET-LANDSCAPE BREAKPOINT */
-@media (max-width: 1200px) {
+/*------ SMALL-DESKTOP/TABLET-LANDSCAPE BREAKPOINT ------*/
+@media (max-width: var(--tabletLandscapeBreakpoint)) {
 
     /* Set sections to 90% width */
     section {
@@ -227,12 +211,12 @@ footer {
     }
 }
 
-/* TABLET-VERTICAL BREAKPOINT */
+/*------ TABLET-VERTICAL BREAKPOINT ------*/
 @media (max-width: 992px) {
     /* Nothing currently implemented */
 }
 
-/* PHONE BREAKPOINT */
+/*------ PHONE BREAKPOINT ------*/
 @media (max-width: 575px) {
 
     /* Set side bar to take up entire width */
@@ -244,6 +228,7 @@ footer {
     footer {
         flex-direction: column-reverse;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
+        padding: 20px 20px;
     }
 }
