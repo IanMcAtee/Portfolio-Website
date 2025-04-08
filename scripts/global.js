@@ -1,10 +1,11 @@
 /* 
-Script: main.js
+Script: global.js
 Purpose: Controls the functionality for elements present on all pages:
     - Light/dark mode switching
     - Sidebar navigation
 */
 
+// Get a reference to the root
 const root = document.documentElement;
 
 ////////// LIGHT/DARK MODE FUNCTIONALITY //////////
@@ -37,16 +38,16 @@ function toggleLightDarkMode()
     // Assign CSS variables and btn icon image based on theme
     if (isLightMode)
     {
-        lightDarkModeHeaderBtnImg.setAttribute("src", "./images/global/icons/dark_mode_24dp.svg");
-        lightDarkModeSidebarBtnImg.setAttribute("src", "./images/global/icons/dark_mode_24dp.svg");
+        lightDarkModeHeaderBtnImg.setAttribute("src", "./images/global/icons/dark-mode.svg");
+        lightDarkModeSidebarBtnImg.setAttribute("src", "./images/global/icons/dark-mode.svg");
         root.style.setProperty("--backgroundColor", lightModeBackgroundColor);
         root.style.setProperty("--primaryTextColor", lightModePrimaryTextColor);
         root.style.setProperty("--iconColor", lightModeIconColor);
     }
     else
     {
-        lightDarkModeHeaderBtnImg.setAttribute("src", "./images/global/icons/light_mode_24dp.svg");
-        lightDarkModeSidebarBtnImg.setAttribute("src", "./images/global/icons/light_mode_24dp.svg");
+        lightDarkModeHeaderBtnImg.setAttribute("src", "./images/global/icons/light-mode.svg");
+        lightDarkModeSidebarBtnImg.setAttribute("src", "./images/global/icons/light-mode.svg");
         root.style.setProperty("--backgroundColor", darkModeBackgroundColor);
         root.style.setProperty("--primaryTextColor", darkModePrimaryTextColor);
         root.style.setProperty("--iconColor", darkModeIconColor);
@@ -59,23 +60,26 @@ lightDarkModeSidebarBtn.addEventListener("click", toggleLightDarkMode);
 
 ////////// SIDEBAR FUNCTIONALITY //////////
 
-
+// Get references to the sidebar elements
 const sidebarContainer = document.getElementById("sidebar-container");
 const openSidebarBtn = document.getElementById("open-sidebar-btn");
 const closeSidebarBtn = document.getElementById("close-sidebar-btn");
 
+// Function to open sidebar
 function openSidebar()
 {
     console.log("open button pressed");
     sidebarContainer.style.display ="flex";
 }
 
+// Function to close sidebar
 function closeSidebar()
 {
     console.log("close button pressed");
     sidebarContainer.style.display = "none";
 }
 
+// Add open/close functions to buttons
 openSidebarBtn.addEventListener("click", openSidebar);
 closeSidebarBtn.addEventListener("click", closeSidebar);
 

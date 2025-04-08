@@ -1,3 +1,5 @@
+<!-- INDEX -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 </head>
 
 <body>
-    <!-- HEADER -->
+    <!------ HEADER ------>
     <header>
         <svg class="theme-unfilled-svg" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 128 128" fill="none" stroke="black" stroke-width="8"><path d="M 4 4 Q 64 68 124 4 Z M 48 4 Q 112 64 48 124 Z M 4 124 Q 64 60 124 124 Z" stroke-linejoin="round"/></svg>
         <nav class="header-btns-container">
@@ -21,18 +23,18 @@
             <a href="#">ABOUT</a>
             <a href="#">CONTACT</a>
             <button id="light-dark-mode-header-btn" class="icon-btn">
-                <img src="./images/global/icons/dark_mode_24dp.svg"/>
+                <img src="./images/global/icons/dark-mode.svg"/>
             </button>
             <button id="open-sidebar-btn" class="icon-btn">
-                <img src="./images/global/icons/menu_24dp.svg"/>
+                <img src="./images/global/icons/menu.svg"/>
             </button>
         </nav>
     </header>
 
-    <!-- SIDEBAR -->
+    <!------ SIDEBAR ------>
     <nav id="sidebar-container">
         <button id="close-sidebar-btn" class="icon-btn">
-            <img src="./images/global/icons/close_24dp.svg"/>
+            <img src="./images/global/icons/close.svg"/>
         </button>
         <a href="#">PROJECTS</a>
         <a href="#">BLOG</a>
@@ -40,186 +42,178 @@
         <a href="#">ABOUT</a>
         <a href="#">CONTACT</a>
         <button id="light-dark-mode-sidebar-btn" class="icon-btn">
-            <img src="./images/global/icons/dark_mode_24dp.svg"/>
+            <img src="./images/global/icons/dark-mode.svg"/>
         </button>
     </nav>          
 
     <main>
-        <!-- MAIN TITLE -->
+        <!------ MAIN TITLE ------>
         <section id="main-title-section">
-            <h1 class="title-header">IAN MCATEE</h1>
-            <div class="accent-divider"></div>
-            <p class="main-subtitle">Engineer | Developer | Student</p>
+            <h1 class="page-title-header">IAN MCATEE</h1>
+            <div class="page-title-accent-divider"></div>
+            <p class="page-tagline">Engineer | Developer | Student</p>
         </section>
 
-        <!-- PROJECTS SECTION-->
+        <!------ PROJECTS SECTION ------>
         <section id="projects-section">
             <div class="section-heading">
                 <h2>PROJECTS</h2>
-                <a class="anchor-btn-primary">View All &#8594;</a>
+                <a class="primary-btn">View All &#8594;</a>
             </div>
-            <div class="cards-grid">
+            <div class="project-cards-grid">
                 <a href="#">
-                    <div class="card-container">
-                        <img src="./images/stock/ai-generated-8548258_1280.jpg"/>
-                        <div class="card-content">
-                            <h2 class="card-title">Interpolation Tutorial</h2>
-                            <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
-                            <div class="icon-text-pair">
-                                <img src="./images/icons/Calender24dpWhite.svg">
-                                <p>February 3, 2025</p>
-                            </div>
-                            
-                        </div> 
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="card-container">
-                        <img src="./images/stock/wires.jpg">
-                        <div class="card-content">
-                            <h2 class="card-title">Bayesian Classification</h2>
-                            <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
-                            <div class="icon-text-pair">
-                                <img src="./images/icons/Calender24dpWhite.svg">
+                    <div class="project-card-container">
+                        <img src="./images/index/featured-project-images/cyber-wave.jpg"/>
+                        <div class="project-card-content">
+                            <h2 class="project-card-title">Interpolation Tutorial</h2>
+                            <div class="project-date-container">
+                                <img src="./images/index/icons/calender-white.svg">
                                 <p>February 3, 2025</p>
                             </div>
                         </div> 
                     </div>
                 </a>
                 <a href="#">
-                    <div class="card-container">
-                        <img src="./images/stock/computer-chip.jpg"/>
-                        <div class="card-content">
-                            <h2 class="card-title">This Portfolio Website</h2>
-                            <p class="card-summary">This article explores the three most common methods for interpolation: nearest neighbor, linear, and cubic...</p>
-                            <div class="icon-text-pair">
-                                <img src="./images/icons/Calender24dpWhite.svg">
+                    <div class="project-card-container">
+                        <img src="./images/index/featured-project-images/wires.jpg"/>
+                        <div class="project-card-content">
+                            <h2 class="project-card-title">Bayesian Classification</h2>
+                            <div class="project-date-container">
+                                <img src="./images/index/icons/calender-white.svg">
                                 <p>February 3, 2025</p>
                             </div>
-                            
                         </div> 
                     </div>
                 </a>
-            </div>
+                <a href="#">
+                    <div class="project-card-container">
+                        <img src="./images/index/featured-project-images/computer-chip.jpg"/>
+                        <div class="project-card-content">
+                            <h2 class="project-card-title">Portfolio Website</h2>
+                            <div class="project-date-container">
+                                <img src="./images/index/icons/calender-white.svg">
+                                <p>February 3, 2025</p>
+                            </div>
+                        </div> 
+                    </div>
+                </a>
         </section>
 
-        <!-- ABOUT SECTION -->
-        <section id="about">
+        <!------ ABOUT SECTION ------>
+        <section id="about-section">
             <div class="section-heading">
                 <h2>ABOUT</h2>
             </div>
-            <div class="about-grid-2x3">
-                <div class="about-container">
+            <div class="about-grid">
+                <div class="about-text-container">
                     <h3>Healthcare to Engineering </h3>
                     <p>
-                        Hi there, I’m Ian, It’s nice to meet you. 
+                        Hi there, I’m Ian.
                         After spending the better part of the last decade in healthcare, I’ve decided to make the transition into the engineering field. 
                         While my time in healthcare has been incredibly rewarding, I’m excited to start a new role that merges that experience with my engineering education.
                         I’ve seen firsthand how important tech is in improving patient care and making healthcare systems run effectively. 
                         That’s why I’m excited about this transition—I want to help create the innovative tools that can make a real difference in people’s lives.
                     </p> 
                 </div>
-                <div class="interest-item-container">
-                    <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-hospital-48.png">
-                        <h4>Biomedical<br/>Engineering</h4>
-                    </div>
+                <div class="interest-svg-container">
+                    <svg class="theme-filled-svg" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"><path d="M80-600v-120q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v120h-80v-120H160v120H80Zm80 440q-33 0-56.5-23.5T80-240v-120h80v120h640v-120h80v120q0 33-23.5 56.5T800-160H160Zm240-120q11 0 21-5.5t15-16.5l124-248 44 88q5 11 15 16.5t21 5.5h240v-80H665l-69-138q-5-11-15-15.5t-21-4.5q-11 0-21 4.5T524-658L400-410l-44-88q-5-11-15-16.5t-21-5.5H80v80h215l69 138q5 11 15 16.5t21 5.5Zm80-200Z"/></svg> 
                 </div>
-                <div class="interest-item-container">
-                    <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-machine-learning-48.png">
-                        <h4>Machine<br/>Learning</h4>
-                    </div>
+                <div class="interest-text-container">
+                    <h3>Biomedical<br>Engineering</h3>
                 </div>
-                <div class="interest-item-container">
-                    <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-oculus-rift-48.png">
-                        <h4>Mixed<br/>Reality</h4>
-                    </div>
+                <div class="interest-svg-container">
+                    <svg class="theme-filled-svg" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"><path d="M323-160q-11 0-20.5-5.5T288-181l-78-139h58l40 80h92v-40h-68l-40-80H188l-57-100q-2-5-3.5-10t-1.5-10q0-4 5-20l57-100h104l40-80h68v-40h-92l-40 80h-58l78-139q5-10 14.5-15.5T323-800h97q17 0 28.5 11.5T460-760v160h-60l-40 40h100v120h-88l-40-80h-92l-40 40h108l40 80h112v200q0 17-11.5 28.5T420-160h-97Zm237 0q-33 0-56.5-23.5T480-240q0-23 11-40.5t29-28.5v-342q-18-11-29-28.5T480-720q0-33 23.5-56.5T560-800q33 0 56.5 23.5T640-720q0 23-11 40.5T600-651v101l80-48q0-34 23.5-58t56.5-24q33 0 56.5 23.5T840-600q0 33-23.5 56.5T760-520q-11 0-20.5-2.5T721-530l-91 55 101 80q7-3 14-4t15-1q33 0 56.5 23.5T840-320q0 33-23.5 56.5T760-240q-37 0-60.5-28T681-332l-81-65v89q18 11 28.5 28.5T639-240q0 33-23 56.5T560-160Z"/></svg>
                 </div>
-                <div class="interest-item-container">
-                    <div class="icon-text-pair">
-                        <img class="icon-bordered" src="./images/icons/icons8-web-48.png">
-                        <h4>Web<br/>Development</h4>
-                    </div>
+                <div class="interest-text-container">
+                    <h3>Machine<br/>Learning</h3>
                 </div>
+                <div class="interest-svg-container">
+                    <svg class="theme-filled-svg" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"><path d="M440-181 240-296q-19-11-29.5-29T200-365v-230q0-22 10.5-40t29.5-29l200-115q19-11 40-11t40 11l200 115q19 11 29.5 29t10.5 40v230q0 22-10.5 40T720-296L520-181q-19 11-40 11t-40-11Zm0-92v-184l-160-93v185l160 92Zm80 0 160-92v-185l-160 93v184ZM80-680v-120q0-33 23.5-56.5T160-880h120v80H160v120H80ZM280-80H160q-33 0-56.5-23.5T80-160v-120h80v120h120v80Zm400 0v-80h120v-120h80v120q0 33-23.5 56.5T800-80H680Zm120-600v-120H680v-80h120q33 0 56.5 23.5T880-800v120h-80ZM480-526l158-93-158-91-158 91 158 93Zm0 45Zm0-45Zm40 69Zm-80 0Z"/></svg>
+                </div>
+                <div class="interest-text-container">
+                    <h3>Mixed<br/>Reality</h3>
+                </div>
+                <div class="interest-svg-container">
+                    <svg class="theme-filled-svg" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px"><path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z"/></svg>
+                </div>
+                <div class="interest-text-container">
+                    <h3>Web<br/>Developer</h3>
+                </div>
+                
             </div>
         </section>
 
-        <!-- SKILLS SECTION -->
-        <section id="skills">
+        <!------ SKILLS SECTION ------>
+        <section id="skills-section">
             <div class="section-heading">
                 <h2>SKILLS</h2>
+                <a class="primary-btn">Resume &#8594;</a>
             </div>
-            <div class="skills-grid-1x3">
-                <div class="skill-container">
-                    <h3 class="skill-title">Languages</h3>
-                    <div class="skill-masonry">
-                        <div class="skill-item">C++</div>
-                        <div class="skill-item">C#</div>
-                        <div class="skill-item">CSS</div>
-                        <div class="skill-item">HTML</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">MatLab</div>
-                        <div class="skill-item">Python</div>
+            <div class="skills-grid">
+                <div class="skill-set-container">
+                    <h3 class="skill-set-title">Languages</h3>
+                    <div class="skills-masonry-container">
+                        <div class="skill-item">C++ </div>
+                        <div class="skill-item">C# </div>
+                        <div class="skill-item">CSS </div>
+                        <div class="skill-item">HTML </div>
+                        <div class="skill-item">JavaScript </div>
+                        <div class="skill-item">MatLab </div>
+                        <div class="skill-item">Python </div>
                     </div>
                 </div>
-                <div class="skill-container">
-                    <h3 class="skill-title">Libraries & Frameworks</h3>
-                    <div class="skill-masonry">
-                        <div class="skill-item">.Net</div>
-                        <div class="skill-item">React</div>
+                <div class="skill-set-container">
+                    <h3 class="skill-set-title">Libraries & Frameworks</h3>
+                    <div class="skills-masonry-container">
+                        <div class="skill-item">.Net </div>
                         <div class="skill-item">jQuery</div>
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">TensorFlow</div>
-                        <div class="skill-item">MatLab</div>
-                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Node.js </div>
+                        <div class="skill-item">OpenXR </div>
+                        <div class="skill-item">TensorFlow </div>
                     </div>
                 </div>
-                <div class="skill-container">
-                    <h3 class="skill-title">Tools</h3>
-                    <div class="skill-masonry">
+                <div class="skill-set-container">
+                    <h3 class="skill-set-title">Tools</h3>
+                    <div class="skills-masonry-container">
+                        <div class="skill-item">Blender</div>
                         <div class="skill-item">Git / Github</div>
-                        <div class="skill-item">Unity Engine</div>
-                        <div class="skill-item">Unreal Engine</div>
-                        <div class="skill-item">HTML</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">MatLab</div>
-                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Unity</div>
+                        <div class="skill-item">Unreal </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact">
+        <!------ CONTACT SECTION ------>
+        <section id="contact-section">
             <div class="section-heading">
                 <h2>CONTACT</h2>
             </div>
-            <div class="contact-grid-1x2">
+            <div class="contact-grid">
                 <div>
                     <form>
                         <div class="contact-form-container">
                             <label for="name">Name:</label>
-                            <input class="contact-form-input" type="text" name="name" id="name" required />
+                            <input class="contact-form-input" type="text" name="name" id="name" placeholder="Your Name" required />
                             <label for="email">Email: </label>
-                            <input class="contact-form-input" type="email" name="email" id="email" required />
+                            <input class="contact-form-input" type="email" name="email" id="email" placeholder="email@example.com" required />
                             <label for="message" class="form-label">Message</label>
                             <textarea class="contact-form-input contact-form-message-area" id="message" name="message" placeholder="Your message"></textarea>
-                            <input class="contact-form-submit-btn" type="submit" value="Send" />
+                            <input class="primary-btn" type="submit" value="Send" />
                         </div>
                     </form>
                 </div>
-                <div class="contact-explainer-container">
+                <div class="contact-text-container">
                     <h3>Open to New Opportunities</h3>
-                    <p>If you have an open role that you believe matches my skillset, leave a message or reachout on any of my socials.
-                        I'd love to talk to you. 
+                    <p>If you have an open role that you believe matches my skillset, leave me a message or reachout on any of my socials.
+                        I'd love to discuss it with you. 
                     </p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!------ GLOBAL FOOTER ------>
     <footer>
         <p>© 2025 Ian McAtee</p>
         <div class="social-icons-container">
@@ -241,9 +235,7 @@
         </div>
     </footer>
 
-
-
-    <!-- IMPORT MAIN JAVASCRIPT -->
-    <script src="./scripts/main.js" charset="UTF-8"></script>
+    <!------ IMPORT MAIN JAVASCRIPT ------>
+    <script src="./scripts/global.js" charset="UTF-8"></script>
 </body>
 </html>

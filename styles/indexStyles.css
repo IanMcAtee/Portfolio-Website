@@ -1,15 +1,11 @@
-/* 
-MAIN PAGE STYLES
-Last updated: 3/17/25
-*/
+/* MAIN PAGE STYLES */
 
-
-/* GLOBAL PAGE PROPERTIES */
+/*------ GLOBAL PAGE PROPERTIES ------*/
 .section-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: x-large;
+    font-size: 18pt;
     font-weight: bold;
     border-style: solid;
     border-width: 0px 0px 3px 0px;
@@ -17,18 +13,17 @@ Last updated: 3/17/25
     margin-bottom: 20px;
 }
 
-
-/* MAIN TITLE PROPERTIES */
-.title-header {
+/*------ MAIN TITLE PROPERTIES ------*/
+.page-title-header {
     font-size: 100pt;
     font-weight: 900;
 }
 
-.main-subtitle {
+.page-tagline {
     font-size: 18pt;
 }
 
-.accent-divider {
+.page-title-accent-divider {
     height: 1px;
     border-style: solid;
     border-color: var(--accentColor);
@@ -38,81 +33,71 @@ Last updated: 3/17/25
     margin-bottom: 20px;
 }
 
-/* PROJECTS SECTION PROPERTIES */
-.cards-grid{
+/*------ PROJECTS SECTION PROPERTIES ------*/
+.project-cards-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 500px;
     gap: 20px;
 }
 
-.card-container {
+.project-cards-grid > a{
+    text-decoration: none;
+}
+
+.project-card-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%,  rgba(0, 0, 0, .0) 33%, rgba(0, 0, 0, 0.9) 100%);
-    border-radius: 20px; 
-    color: white;
-    text-decoration: none;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
-    /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);  */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); 
 }
 
-.card-container > img {
+.project-card-container > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-    inset: 0px;
     z-index: -1;
 }
 
-.card-content {
+.project-card-content {
     margin: 0px 20px 60px 20px;
 }
 
-.card-title {
+.project-card-title {
     margin-bottom: 20px;
     color: white;
 }
 
-.card-summary {
-    margin-bottom: 10px;
-    color: rgb(230, 230, 230);
-    display: none;
-}
-
-.icon-text-pair {
+.project-date-container {
     display: flex;
     height: auto;
     align-items: center;
     gap: 10px;
+}
+
+.project-date-container > p {
     color: white;
 }
 
-.card-container:hover {
+.project-card-container:hover {
     height: 103%;
 }
 
-.card-container:hover .card-summary
-{
-    display: block;
-}
-
-/* ABOUT SECTION PROPERTIES */
-.about-grid-2x3 {
+/*------ ABOUT SECTION PROPERTIES ------*/
+.about-grid {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 30px;
+    grid-template-columns: 4fr 0.5fr 1fr 0.5fr 1fr;
+    gap: 10px;
 }
 
-.about-container { 
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+.about-text-container {
+    grid-row: span 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,62 +105,58 @@ Last updated: 3/17/25
     border-style: solid;
     border-radius: 20px;
     border-width: 3px;
-    padding: 15px
+    padding: 15px;
+    margin-right: 20px;
 }
 
-.interest-item-container {
+.interest-svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interest-text-container {
     display: flex;
     align-items: center;
 }
 
-.icon-text-pair { /*Duplicate from above */
-    display: flex;
-    height: auto;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon-bordered {
-    border-radius: 20px;
-    border-style: solid;
-    border-color: aquamarine;
+.interest-svg-container > svg {
+    border: solid;
+    border-color: var(--accentColor);
+    border-radius: 10px;
     border-width: 4px;
-    padding: 5px;
+    padding: 10px;
 }
 
-/* SKILLS SECTION PROPERTIES */
-.skills-grid-1x3 {
+/*------ SKILLS SECTION PROPERTIES ------*/
+.skills-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr ;
     gap: 15px;
 }
 
-.skill-container {
+.skill-set-container {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     border-style: solid;
     border-width: 3px;
-    border-color: black;
     padding: 15px;
 }
 
-.skill-title {
+.skill-set-title {
     margin-bottom: 10px;
 }
 
-.skill-masonry {
+.skills-masonry-container {
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
     gap: 4px;
     justify-content: flex-start;
-
 }
 
 .skill-item {
-    display: inline;
     border-style: solid;
     border-color: var(--accentColor);
     border-radius: 20px;
@@ -183,12 +164,12 @@ Last updated: 3/17/25
     padding: 5px 10px;
 }
 
-/* CONTACT SECTION PROPERTIES */
-.contact-grid-1x2 {
+/*------ CONTACT SECTION PROPERTIES ------*/
+.contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 60px;
+    gap: 40px;
 }
 
 .contact-form-container {
@@ -198,11 +179,12 @@ Last updated: 3/17/25
 }
 
 .contact-form-input {
+    border-style: solid;
     border-radius: 10px;
+    border-width: 3px;
+    border-color: var(--primaryTextColor);
     padding: 5px 10px;
     height: 20px;
-    border-width: 3px;
-    border-color: black;
     font-size: 12pt;
 }
 
@@ -210,47 +192,112 @@ Last updated: 3/17/25
     height: 120px;
 }
 
-.contact-form-submit-btn { /* consider just using the accent button class */
-    background-color: var(--accentColor);
-    border-radius: 10px;
-    border-style: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 14pt;
-    max-width: fit-content;
-}
-
-.contact-explainer-container {
+.contact-text-container {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     gap: 20px;
 }
 
-
-/* SMALL-DESKTOP/TABLET-LANDSCAPE BREAKPOINT */
-@media (max-width: 1200px) {
-
+textarea {
+    resize: vertical;
 }
 
-/* TABLET-VERTICAL BREAKPOINT */
+/*-------------------- SMALL-DESKTOP/TABLET-LANDSCAPE BREAKPOINT --------------------*/
+@media (max-width: 1200px) {
+    /* Nothing currently implemented */
+}
+
+/*-------------------- TABLET-VERTICAL BREAKPOINT --------------------*/
 @media (max-width: 992px) {
 
-    .title-header {
+    /*------ MAIN TITLE PROPERTIES ------*/
+    /* Decrease title header */
+    .page-title-header {
         font-size: 80pt;
     }
 
-    .cards-grid {
-        grid-template-rows: 500px 500px 500px;
+    /*------ PROJECTS SECTION PROPERTIES ------*/
+    /* Change project grid to single column */
+    .project-cards-grid {
+        grid-template-rows: 400px 400px 400px;
         grid-template-columns: 1fr;
         height: auto;
         gap: 20px;
     }
+
+    /*------ ABOUT SECTION PROPERTIES ------*/
+    /* Change about grid to 3x4 */
+    .about-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        grid-template-rows: 2fr 1fr 1fr
+    }
+
+    /* Change the about text container to span the first four columns.
+       Eliminate the right side margin */
+    .about-text-container{
+        grid-column: span 4;
+        grid-row: 1;
+        margin-right: 0px;
+    }
+
+    /* Align the interest svg to right of cell */
+    .interest-svg-container {
+        justify-content: right;
+    }
+
+    /*------ SKILLS SECTION PROPERTIES ------*/
+
+    /* Change the skills grid to 3x1 */
+    .skills-grid {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    /*------ CONTACT SECTION PROPERTIES ------*/
+
+    /* Change the contact grid to be 1 column */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
 }
 
-/* PHONE BREAKPOINT */
+/*-------------------- PHONE BREAKPOINT --------------------*/
 @media (max-width: 575px) {
-    .title-header {
-        font-size: 70pt;
+
+    /*------ GLOBAL PAGE PROPERTIES ------*/
+    .section-heading {
+        font-size: 14pt;
+    }
+
+    /*------ MAIN TITLE PROPERTIES ------*/
+    /* Decrease title header and set a larger top margin*/
+    .page-title-header {
+        font-size: 50pt;
+        margin-top: 40px;
+    }
+
+    /*------ ABOUT SECTION PROPERTIES ------*/
+    /* Change about grid to 5x2 */
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 100px 100px 100px 100px;
+    }
+
+    /* Set the about text container to span the first two columns */
+    .about-text-container {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+
+    /* Align interest svg to right of cell */
+    .interest-svg-container {
+        justify-content: right;
+    }
+
+    /* Align interest text to left of cell */
+    .interest-text-container {
+        justify-content: start;
+        text-align: left;
     }
 }
